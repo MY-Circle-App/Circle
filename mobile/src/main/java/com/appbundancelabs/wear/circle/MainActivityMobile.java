@@ -30,6 +30,7 @@ import android.util.Log;
 public class MainActivityMobile extends AppCompatActivity {
 
    private int iClkTime = 1; // Count of button click
+   TextView tvLocation;
 
 
     @Override
@@ -49,6 +50,7 @@ public class MainActivityMobile extends AppCompatActivity {
 
         //Button btn = (Button) findViewById(R.id.button3);
 
+        // To exit / kill application
         Button btnClose = (Button) findViewById(R.id.button2);
         btnClose.setOnClickListener(new OnClickListener() {
             @Override
@@ -83,6 +85,7 @@ public class MainActivityMobile extends AppCompatActivity {
 
 
         // Save smartBin data to Parse
+        /*
         ParseObject smartBin = new ParseObject("SmartBin");
         smartBin.put("date", "27-08-2015");
         smartBin.put("time", "15:45:25");
@@ -90,7 +93,7 @@ public class MainActivityMobile extends AppCompatActivity {
         smartBin.put("location", "KLCC");
         smartBin.put("weight", "5.2");
         smartBin.saveInBackground();
-
+        */
 
         // Retrive Data from Parse
         ParseQuery<ParseObject> query = ParseQuery.getQuery("SmartBin");
@@ -104,10 +107,10 @@ public class MainActivityMobile extends AppCompatActivity {
                     Date createdAt    = parseObject.getCreatedAt();
                     String smartBinId = parseObject.getString("smartBin_Id");
                     String location   = parseObject.getString("location");
-
-                    double weight = parseObject.getDouble("weight");
+                    double weight     = parseObject.getDouble("weight");
                     // Show weight value  at UI
-                    //TV_weight.setText(location);
+                    TextView location_parse = (TextView) findViewById(R.id.tvLocation);
+                    location_parse.setText(location);
 
                 } else {
                     // something went wrong here
