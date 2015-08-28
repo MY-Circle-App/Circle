@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/myLayout">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView2"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/garbage_truck"/>
 
     <TextView
@@ -15,12 +17,23 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Truck WMX 4321 sent to KLCC."
         android:id="@+id/textView11"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ETA in 2 hours 18 mins"
+        android:id="@+id/textView12"
+        android:layout_gravity="center_horizontal"
+        />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Close"
         android:id="@+id/closeActivity"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        />
 </LinearLayout>

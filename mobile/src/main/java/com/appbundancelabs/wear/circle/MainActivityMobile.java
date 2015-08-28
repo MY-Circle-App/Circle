@@ -47,7 +47,7 @@ public class MainActivityMobile extends AppCompatActivity {
             }
         });
 
-        Button btn = (Button) findViewById(R.id.button3);
+        //Button btn = (Button) findViewById(R.id.button3);
 
         Button btnClose = (Button) findViewById(R.id.button2);
         btnClose.setOnClickListener(new OnClickListener() {
@@ -61,6 +61,7 @@ public class MainActivityMobile extends AppCompatActivity {
         final String prefixPrompt = "This is No. ";
         final String suffixPrompt = " time(s) that button is clicked";
 
+        /*
         btn.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +69,7 @@ public class MainActivityMobile extends AppCompatActivity {
                 iClkTime++;
             }
         });
+        */
 
         // Enable Local Datastore.
         Parse.enableLocalDatastore(this);
