@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Circle</string>
+
+
+    <string name="app_header">Circle App</string>
+    <string name="action_settings">Settings</string>
+</resources>
