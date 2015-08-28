@@ -6,6 +6,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import android.content.Intent;
+
 import com.parse.GetCallback;
 import com.parse.Parse;
 import com.parse.ParseAnalytics;
@@ -36,6 +38,15 @@ public class MainActivityMobile extends AppCompatActivity {
         setContentView(R.layout.activity_main_activity_mobile);
 
         // Get handle of button
+        Button dispatchBtn = (Button) findViewById(R.id.dispatchBtn);
+        dispatchBtn.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivityMobile.this, Page2Activity.class);
+                startActivity(intent);
+            }
+        });
+
         Button btn = (Button) findViewById(R.id.button3);
 
         Button btnClose = (Button) findViewById(R.id.button2);
